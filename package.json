@@ -1,13 +1,13 @@
 {
   "name": "v1",
   "version": "1.0.0",
-  "description": "YelpCamp v1",
+  "description": "Tokyo2020 V1",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "Colt Steele",
+  "author": "Roy Ge",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
