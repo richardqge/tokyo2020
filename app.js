@@ -19,7 +19,8 @@ var commentRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index");
 
 var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
-// mongoose.connect("mongodb://localhost/tokyo2020_test");
+mongoose.connect("mongodb+srv://rgecoder:rgecoder@tokyo2020v1-xgatl.mongodb.net/test?retryWrites=true&w=majority");
+// mongodb+srv://rgecoder:<password>@tokyo2020v1-xgatl.mongodb.net/test?retryWrites=true&w=majority
 
 // mongoose.connect("mongodb://localhost/tokyo2020_test2");
 
