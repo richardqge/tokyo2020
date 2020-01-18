@@ -19,3 +19,62 @@
     height: 400px;
     width: 100%;
 }
+
+.navbar{
+    border-radius: 0px;
+}
+
+.jumbotron{
+    background-image: url("https://images.unsplash.com/photo-1500214439798-ef148e2fa93e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    
+}
+
+.jumbotron .container{
+    color:white;
+}
+
+#login{
+    background-image:url("https://images.unsplash.com/photo-1461727885569-b2ddec0c4328?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#signUp{
+    background-image:url("https://images.unsplash.com/photo-1464882218410-7aa65cf2b773?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+body{
+    background-color: #212529;
+}
+
+/* .mainIndex{
+    background-color:pink;
+} */
+
+.thumbnail {
+    background: #212529;
+    border-style:none;
+    
+}
+
+h4{
+    color:white;
+}
+
+p{
+    color:white;
+}
+
+
+.well{
+    background: #212529;
+}
+
+h5{
+    color:white;
+}
