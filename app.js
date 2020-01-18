@@ -18,7 +18,7 @@ var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   indexRoutes = require("./routes/index");
 
-var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
+// var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
 mongoose.connect("mongodb+srv://rgecoder:rgecoder@tokyo2020v1-xgatl.mongodb.net/test?retryWrites=true&w=majority");
 // mongodb+srv://rgecoder:<password>@tokyo2020v1-xgatl.mongodb.net/test?retryWrites=true&w=majority
 
