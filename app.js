@@ -18,8 +18,8 @@ var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   indexRoutes = require("./routes/index");
 
-// var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
-mongoose.connect("mongodb://localhost/tokyo2020_test");
+var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
+// mongoose.connect("mongodb://localhost/tokyo2020_test");
 
 // mongoose.connect("mongodb://localhost/tokyo2020_test2");
 
