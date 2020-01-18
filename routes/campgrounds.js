@@ -38,7 +38,8 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         username: req.user.username
     }
     geocoder.geocode(req.body.location, function (err, data) {
-      if (err || !data.length) {
+        // if (err || !data.length) {
+        if (err) {
         req.flash('error', 'Invalid address');
         return res.redirect('back');
       }
