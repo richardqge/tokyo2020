@@ -54,7 +54,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
           } else {
               //redirect back to campgrounds page
               console.log(newlyCreated);
-              res.redirect("/campgrounds");
+              res.redirect("/destinations");
           }
       });
     });
@@ -104,7 +104,7 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res){
               res.redirect("back");
           } else {
               req.flash("success","Successfully Updated!");
-              res.redirect("/campgrounds/" + campground._id);
+              res.redirect("/destinations/" + campground._id);
           }
       });
     });
@@ -114,9 +114,9 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res){
 router.delete("/:id",middleware.checkCampgroundOwnership, function(req, res){
    Campground.findByIdAndRemove(req.params.id, function(err){
       if(err){
-          res.redirect("/campgrounds");
+          res.redirect("/destinations");
       } else {
-          res.redirect("/campgrounds");
+          res.redirect("/destinations");
       }
    });
 });

@@ -23,12 +23,12 @@
         <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
         <a
           class="btn btn-xs btn-info"
-          href="/campgrounds/<%= campground._id %>/edit"
+          href="/destinations/<%= campground._id %>/edit"
           >Edit</a
         >
         <form
           id="delete-form"
-          action="/campgrounds/<%= campground._id %>?_method=DELETE"
+          action="/destinations/<%= campground._id %>?_method=DELETE"
           method="POST"
         >
           <button class="btn btn-xs btn-warning">Delete</button>
@@ -40,7 +40,7 @@
       <div class="text-left">
         <a
           class="btn btn-success"
-          href="/campgrounds/<%= campground._id %>/comments/new"
+          href="/destinations/<%= campground._id %>/comments/new"
           >Add Comment to the Wall</a
         >
       </div>
@@ -69,12 +69,12 @@
           <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
           <a
             class="btn btn-xs btn-success"
-            href="/campgrounds/<%=campground._id %>/comments/<%=comment._id %>/edit"
+            href="/destinations/<%=campground._id %>/comments/<%=comment._id %>/edit"
             >Edit</a
           >
           <form
             id="delete-form"
-            action="/campgrounds/<%=campground._id %>/comments/<%=comment._id %>?_method=DELETE"
+            action="/destinations/<%=campground._id %>/comments/<%=comment._id %>?_method=DELETE"
             method="POST"
           >
             <input type="submit" class="btn btn-xs btn-warning" value="Delete" />

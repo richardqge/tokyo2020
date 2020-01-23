@@ -15,12 +15,13 @@ var express = require("express"),
 
 //requiring routes
 var commentRoutes = require("./routes/comments"),
-  campgroundRoutes = require("./routes/campgrounds"),
+  campgroundRoutes = require("./routes/destinations"),
   indexRoutes = require("./routes/index");
 
 // var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
+
 mongoose.connect("mongodb+srv://rgecoder:rgecoder@tokyo2020v1-xgatl.mongodb.net/test?retryWrites=true&w=majority");
-// mongoose.connect("mongodb://localhost/tokyo2020_local");
+
 
 // mongoose.connect("mongodb://localhost/tokyo2020_test2");
 
@@ -53,10 +54,10 @@ app.use(function(req, res, next) {
 });
 
 app.use("/", indexRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/destinations", campgroundRoutes);
+app.use("/destinations/:id/comments", commentRoutes);
 
 // app.listen(process.env.PORT, process.env.IP, function() {
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen(3000, function() {
   console.log("The YelpCamp Server Has Started!");
 });
