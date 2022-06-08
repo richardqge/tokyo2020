@@ -5,6 +5,7 @@ Tokyo2020 is a website where users can create and review popular tourist destina
 This project was created using Node.js, Express, MongoDB, and Bootstrap. Passport.js was used to handle authentication.
 APIs: Google Maps API
 
+### Heading 3 ###
 Features
 Users can create, edit, and remove tourist recommendations.
 Users can review recommendations once, and edit or remove their review
