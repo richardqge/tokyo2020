@@ -1,26 +1,26 @@
 var express = require("express");
 var router = express.Router({ mergeParams: true });
-var Campground = require("../models/campground");
+var destination = require("../models/destination");
 var Comment = require("../models/comment");
 var middleware = require("../middleware");
 
 //Comments New
 router.get("/new", middleware.isLoggedIn, function(req, res) {
-  // find campground by id
+  // find destination by id
   console.log(req.params.id);
-  Campground.findById(req.params.id, function(err, campground) {
+  destination.findById(req.params.id, function(err, destination) {
     if (err) {
       console.log(err);
     } else {
-      res.render("comments/new", { campground: campground });
+      res.render("comments/new", { destination: destination });
     }
   });
 });
 
 //Comments Create 
 router.post("/", middleware.isLoggedIn, function(req, res) {
-  //lookup campground using ID
-  Campground.findById(req.params.id, function(err, campground) {
+  //lookup destination using ID
+  destination.findById(req.params.id, function(err, destination) {
     if (err) {
       console.log(err);
       res.redirect("/destinations");
@@ -36,12 +36,12 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
           //save comment
           comment.save();
 
-          campground.comments.push(comment);
-          campground.save();
+          destination.comments.push(comment);
+          destination.save();
 
           console.log(comment);
           req.flash("success", "Successfully added comment");
-          res.redirect("/destinations/" + campground._id);
+          res.redirect("/destinations/" + destination._id);
         }
       });
     }
@@ -58,7 +58,7 @@ router.get("/:comment_id/edit", middleware.checkCommentOwnership, function(
       res.redirect("back");
     } else {
       res.render("comments/edit", {
-        campground_id: req.params.id,
+        destination_id: req.params.id,
         comment: foundComment
       });
     }

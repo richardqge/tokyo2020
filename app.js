@@ -8,14 +8,14 @@ var express = require("express"),
   passport = require("passport"),
   LocalStrategy = require("passport-local"),
   methodOverride = require("method-override"),
-  Campground = require("./models/campground"),
+  destination = require("./models/destination"),
   Comment = require("./models/comment"),
   User = require("./models/user"),
   seedDB = require("./seeds");
 
 //requiring routes
 var commentRoutes = require("./routes/comments"),
-  campgroundRoutes = require("./routes/destinations"),
+  destinationRoutes = require("./routes/destinations"),
   indexRoutes = require("./routes/index");
 
 // var url = process.env.DATABASEURL || "mongodb://localhost/tokyo2020_local";
@@ -54,7 +54,7 @@ app.use(function(req, res, next) {
 });
 
 app.use("/", indexRoutes);
-app.use("/destinations", campgroundRoutes);
+app.use("/destinations", destinationRoutes);
 app.use("/destinations/:id/comments", commentRoutes);
 
 // app.listen(process.env.PORT, process.env.IP, function() {
