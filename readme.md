@@ -1,4 +1,4 @@
-# topyo2020 - Social Media Full Stack Application
+# tokyo2020 - Social Media Full Stack Application
 
 <p align="center">
 </p>
